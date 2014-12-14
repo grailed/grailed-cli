@@ -1,0 +1,15 @@
+{
+	"name": "grailed",
+	"version": "2.0.0",
+	"description": "",
+	"main": "bin/grailed",
+	"scripts": {
+		"start": "node bin/grailed",
+		"test": "npm run test-api",
+		"test-api": "mocha bin/grailed-test"
+	},
+	"author": "David Tsuji",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {}
+}

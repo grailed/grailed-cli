@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var env = require( './grailed-env' ),
+	path = require( 'path' );
+
+module.exports = require( path.join( env.PATH_GRAILED, 'bin/migrate' ) );

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%- grailed.name %></title>
+
+	<script src="/components/grailed/dependencies.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="/components/grailed/app/styles/index.css">
+	<script src="/components/grailed/app/scripts/index<%- process.env.NODE_ENV === 'production' ? '.min' : '' %>.js"></script>
+
+</head>
+<body>
+	
+	<h1><%- grailed.env.APP_NAME %></h1>
+
+</body>
+</html>

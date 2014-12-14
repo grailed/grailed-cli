@@ -1,0 +1,26 @@
+@CWD: "../../../../..";
+@PATH_COMPONENTS: "@{CWD}/public/components";
+
+@import (reference) "@{PATH_COMPONENTS}/bootstrap/less/variables.less";
+@import (reference) "@{PATH_COMPONENTS}/bootstrap/less/mixins.less";
+@import (reference) "@{PATH_COMPONENTS}/bootstrap/less/normalize.less";
+@import (reference) "@{PATH_COMPONENTS}/bootstrap/less/utilities.less";
+@import (reference) "@{PATH_COMPONENTS}/bootstrap/less/responsive-utilities.less";
+
+@import (css) "/components/bootstrap/dist/css/bootstrap.min.css";
+
+html > body {
+	h1 {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 0;
+		text-align: center;
+		font-weight: normal;
+
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+
+		.translate(0, -100%);
+	}
+}

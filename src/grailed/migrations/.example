@@ -1,0 +1,9 @@
+var migrate = require( process.cwd() + '/bin/grailed-migrate' );
+
+exports.up = function ( next ) {
+	migrate.up( __filename, [], next );
+};
+
+exports.down = function ( next ) {
+	migrate.down( __filename, next );
+};

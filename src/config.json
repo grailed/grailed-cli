@@ -1,0 +1,14 @@
+{
+	"templates": [
+		"bower.json",
+		"package.json",
+		"config/database.js",
+		"config/environment.js"
+	],
+	"defaults": {
+		"author": "David Tsuji",
+		"license": "MIT",
+		"name": "grailed",
+		"version": "2.0.0"
+	}
+}

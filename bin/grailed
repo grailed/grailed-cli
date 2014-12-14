@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var program = require( 'commander' ),
+	grailed = require( '../src' ),
+	pkg = require( '../package' );
+
+program
+	.version( pkg.version )
+	.option( '-a, --author [type]', 'Author' )
+	.option( '-d --destination [type]', 'Destination' )
+	.option( '-l --license [type]', 'License (MIT)' )
+	.option( '-m --make', 'Make the App' )
+	.option( '-n, --name [type]', 'App Name' )
+	.option( '-s, --salt [type]', 'Salt' )
+	.parse( process.argv );
+
+grailed( program );

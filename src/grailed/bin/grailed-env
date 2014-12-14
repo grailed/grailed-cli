@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+process.env.GRAILED_PATH_GRAILED = process.env.GRAILED_PATH_GRAILED || __dirname + '/../node_modules/grailed';
+
+grailed = global.grailed ? global.grailed : {
+	env: require( process.env.GRAILED_PATH_GRAILED + '/bin/env' )
+};
+
+module.exports = grailed.env;

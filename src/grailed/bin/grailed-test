@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var env = require( './grailed-env' ),
+	path = require( 'path' ),
+	apiConfig = require( path.join( env.PATH_TEST, 'api/config' ) ),
+	runner = require( path.join( env.PATH_GRAILED, 'bin/test-setup' ) );
+
+runner.run( apiConfig.specs );

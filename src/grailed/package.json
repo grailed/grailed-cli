@@ -1,0 +1,19 @@
+{
+	"name": "<%- name %>",
+	"version": "<%- version %>",
+	"description": "",
+	"main": "bin/grailed",
+	"scripts": {
+		"start": "node bin/grailed",
+		"test": "npm run test-api",
+		"test-api": "mocha bin/grailed-test"
+	},
+	"author": "<%- author %>",
+	"license": "<%- license %>",
+	"dependencies": {
+		"grailed": "^2.0.0"
+	},
+	"devDependencies": {
+		"gulp": "^3.8.10"
+	}
+}

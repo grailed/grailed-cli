@@ -1,0 +1,8 @@
+/**
+ * An example of how to define a route
+ */
+module.exports = {
+	'/': {
+		get: grailed.controller.view.main
+	}
+};
