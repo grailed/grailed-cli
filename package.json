@@ -12,6 +12,7 @@
   "dependencies": {
     "cli-color": "^0.3.2",
     "cli-spinner": "^0.1.5",
-    "commander": "^2.5.0"
+    "commander": "^2.5.0",
+    "ejs": "^1.0.0"
   }
 }
