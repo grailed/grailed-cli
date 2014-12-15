@@ -28,7 +28,7 @@ module.exports = function ( destination, program ) {
 	data.version = program.version();
 	data.salt = program.salt || createHash();
 	[ 'author', 'license', 'name' ].forEach( function ( _key ) {
-		data[ _key ] = program[ _key ] || config.defaults[ _key ];
+		data[ _key ] = typeof program[ _key ] === 'string' ? program[ _key ] : config.defaults[ _key ];
 	} );
 
 
