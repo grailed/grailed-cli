@@ -1,15 +1,16 @@
 {
-	"name": "grailed-cli",
-	"version": "2.0.0",
-	"description": "The Grailed CLI",
-	"main": "bin/grailed",
-	"preferGlobal": true,
-	"bin": {
-		"grailed": "./bin/grailed"
-	},
-	"author": "David Tsuji",
-	"license": "MIT",
-	"dependencies": {
-		"cli-spinner": "^0.1.5"
-	}
+  "name": "grailed-cli",
+  "version": "2.0.1",
+  "description": "The Grailed CLI",
+  "main": "bin/grailed",
+  "preferGlobal": true,
+  "bin": {
+    "grailed": "./bin/grailed"
+  },
+  "author": "David Tsuji",
+  "license": "MIT",
+  "dependencies": {
+    "cli-spinner": "^0.1.5",
+    "commander": "^2.5.0"
+  }
 }
