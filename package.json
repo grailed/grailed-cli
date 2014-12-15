@@ -3,6 +3,10 @@
 	"version": "2.0.0",
 	"description": "The Grailed CLI",
 	"main": "bin/grailed",
+	"preferGlobal": true,
+	"bin": {
+		"grailed": "./bin/grailed"
+	},
 	"author": "David Tsuji",
 	"license": "MIT",
 	"dependencies": {
