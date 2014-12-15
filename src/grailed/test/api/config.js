@@ -8,7 +8,8 @@ module.exports = {
 	 * supported)
 	 */
 	specs: [
-		path.join( __dirname, 'specs/**/*.js' )
+		path.join( __dirname, 'specs/**/*.js' ),
+		path.join( process.env.GRAILED_PATH_GRAILED, 'test/api/specs/**/*.js' )
 	],
 
 	/**

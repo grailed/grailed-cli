@@ -6,7 +6,7 @@
 module.exports = {
 
 	default: {
-		databaseName: grailed.env.DATABASE_NAME || '<%- name.replace(/[^\w]/g, "") %>',
+		databaseName: grailed.env.DATABASE_NAME || grailed.env.APP_NAME,
 		username: grailed.env.DATABASE_USERNAME || '',
 		password: grailed.env.DATABASE_PASSWORD || '',
 		primaryServer: grailed.env.DATABASE_PRIMARY_SERVER || '127.0.0.1',
@@ -19,7 +19,7 @@ module.exports = {
 	production: {},
 
 	test: {
-		databaseName: '<%- name.replace(/[^\w]/g, "") %>_test'
+		databaseName: grailed.env.APP_NAME + '_test'
 	}
 
 };

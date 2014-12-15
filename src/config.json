@@ -1,8 +1,8 @@
 {
 	"templates": [
+		".grailedrc",
 		"bower.json",
 		"package.json",
-		"config/database.js",
 		"config/environment.js"
 	],
 	"defaults": {

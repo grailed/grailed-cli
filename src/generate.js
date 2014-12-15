@@ -5,13 +5,15 @@ module.exports = function ( destination, program ) {
 		data = {},
 		ejs = require( 'ejs' ),
 		fs = require( 'fs-extra' ),
-		path = require( 'path' );
+		path = require( 'path' ),
+		Spinner = require( 'cli-spinner' ).Spinner;
 
 	var createHash = function () {
 		var sha = crypto.createHash( 'sha256' );
 		sha.update( Date.now().toString() + Math.random().toString() );
 		return sha.digest( 'base64' );
 	};
+
 
 	/**
 	 * Copy the src files to the destination
@@ -46,9 +48,15 @@ module.exports = function ( destination, program ) {
 	 * Make?
 	 */
 	if ( program.make ) {
-		require( 'child_process' ).exec( 'make', {
+		var spinner = new Spinner( 'making...' );
+		spinner.setSpinnerString( '|/-\\' );
+		spinner.start();
+
+		var child = require( 'child_process' ).exec( 'make', {
 			cwd: destination
 		}, function () {
+			spinner.stop();
+			process.stdout.clearLine();
 			console.log( '' );
 			console.log( clc.green( '  all done ✓' ) );
 			console.log( '' );
