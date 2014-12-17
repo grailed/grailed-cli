@@ -4,6 +4,6 @@ build:
 	@./node_modules/.bin/gulp
 
 clean:
-	@rm -rf node_modules public
+	@rm -rf node_modules
 
 .PHONY: build clean
