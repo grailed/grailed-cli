@@ -6,12 +6,12 @@ var program = require( 'commander' ),
 
 program
 	.version( pkg.version )
-	.option( '-a, --author [type]', 'Author (David Tsuji)' )
-	.option( '-d, --destination [type]', 'Destination (CWD)' )
-	.option( '-l, --license [type]', 'License (MIT)' )
+	.option( '-a, --author [name]', 'Author (David Tsuji)' )
+	.option( '-d, --destination [path]', 'Destination (CWD)' )
+	.option( '-l, --license [license]', 'License (MIT)' )
 	.option( '-m, --make', 'Automatically make the App' )
-	.option( '-n, --name [type]', 'App Name (grailed)' )
-	.option( '-s, --salt [type]', 'App Salt (A random hash)' )
+	.option( '-n, --name [name]', 'App Name (grailed)' )
+	.option( '-s, --salt [salt]', 'App Salt (A random hash)' )
 	.parse( process.argv );
 
 grailed( program );
