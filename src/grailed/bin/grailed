@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 require( './grailed-env' );
-require( 'grailed' ).create().start();
+require( 'grailed' );

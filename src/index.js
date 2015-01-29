@@ -9,32 +9,38 @@ module.exports = function ( program ) {
 
 	try {
 		destinationExists = fs.readdirSync( destination ).length ? true : false;
-	} catch ( e ) {}
+	} catch ( e ) {
+	}
 
 	switch ( true ) {
 
-	case ( destinationExists ):
-		var rl = readline.createInterface( {
-			input: process.stdin,
-			output: process.stdout
-		} );
+		case ( destinationExists ):
 
-		rl.question( 'Folder is not empty, continue (YES|no)? ', function ( answer ) {
-			rl.close();
-
-			if ( /(y|yes|ok)/i.test( answer ) || answer === '' ) {
+			if ( program.force ) {
 				generate( destination, program );
 			} else {
-				console.log( '' );
-				console.log( '\taborting' );
-				console.log( '' );
+				var rl = readline.createInterface( {
+					input: process.stdin,
+					output: process.stdout
+				} );
+
+				rl.question( 'Folder is not empty, continue (YES|no)? ', function ( answer ) {
+					rl.close();
+
+					if ( /(y|yes|ok)/i.test( answer ) || answer === '' ) {
+						generate( destination, program );
+					} else {
+						console.log();
+						console.log( '\taborting' );
+						console.log();
+					}
+				} );
 			}
-		} );
 
-		break;
+			break;
 
-	default:
-		generate( destination, program );
-		break;
+		default:
+			generate( destination, program );
+			break;
 	}
 }

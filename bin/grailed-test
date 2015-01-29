@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var path = require( 'path' );
+
+process.env.PORT = process.env.PORT || 9999;
+
+require( path.join( process.cwd(), 'test' ) );

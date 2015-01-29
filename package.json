@@ -7,6 +7,9 @@
   "bin": {
     "grailed": "./bin/grailed"
   },
+  "scripts": {
+    "test": "mocha bin/grailed-test"
+  },
   "author": "David Tsuji",
   "license": "MIT",
   "repository": {
@@ -23,5 +26,15 @@
     "commander": "^2.5.0",
     "ejs": "^1.0.0",
     "fs-extra": "^0.13.0"
+  },
+  "devDependencies": {
+    "async": "^0.9.0",
+    "grailed": "^2.0.8",
+    "gulp": "^3.8.10",
+    "request": "^2.51.0",
+    "require-directory": "^2.0.0",
+    "sc-cast": "0.0.8",
+    "should": "^4.6.1",
+    "underscore": "^1.7.0"
   }
 }

@@ -3,6 +3,7 @@
  * and just before the http listener is registered allowing you to make last
  * second changes to the app.
  */
-module.exports = function bootstrap ( _done ) {
+module.exports = function bootstrap( _done ) {
+	grailed.customBootstrapHook = true;
 	_done();
 };

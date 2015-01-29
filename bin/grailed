@@ -8,6 +8,7 @@ program
 	.version( pkg.version )
 	.option( '-a, --author [name]', 'Author (David Tsuji)' )
 	.option( '-d, --destination [path]', 'Destination (CWD)' )
+	.option( '-f, --force', 'Force' )
 	.option( '-l, --license [license]', 'License (MIT)' )
 	.option( '-m, --make', 'Automatically make the App' )
 	.option( '-n, --name [name]', 'App Name (grailed)' )

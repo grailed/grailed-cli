@@ -39,6 +39,14 @@ module.exports = [ {
 }, {
 
 	/**
+	 * TEST: attaches middlwareValue to request
+	 */
+	name: 'middlewareValue',
+	method: grailed.module.app.service.middlewareValue
+
+}, {
+
+	/**
 	 * cookie parser e.g. cookieParser()
 	 */
 	name: 'cookieParser',
@@ -55,10 +63,25 @@ module.exports = [ {
 }, {
 
 	/**
+	 * TEST: attaches middlwareValue to request
+	 */
+	name: 'middlewareValue',
+	method: grailed.module.app.service.middlewareValue
+
+}, {
+	/**
 	 * attaches grailed to request
 	 */
 	name: 'grailed',
 	method: 'default'
+
+}, {
+
+	/**
+	 * TEST: attaches middlwareValue to request
+	 */
+	name: 'middlewareValue',
+	method: grailed.module.app.service.middlewareValue
 
 }, {
 

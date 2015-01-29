@@ -15,7 +15,7 @@ module.exports = {
 	/**
 	 * A String that defines the API's base url
 	 */
-	baseUrl: process.env.TEST_BASE_URL || 'http://localhost:3000',
+	baseUrl: process.env.TEST_BASE_URL || 'http://localhost:3000', // TODO: test port from env
 
 	/**
 	 * A function that defines your custom setup hook

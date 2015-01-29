@@ -57,16 +57,15 @@ module.exports = function ( destination, program ) {
 		}, function () {
 			spinner.stop();
 			process.stdout.clearLine();
-			console.log( '' );
+			console.log();
 			console.log( clc.green( '  all done ✓' ) );
-			console.log( '' );
+			console.log();
 		} );
 	} else {
-		console.log( '' );
+		console.log();
 		console.log( clc.cyan( 'Now make the app' ) );
 		console.log( '  ', '$', 'cd ' + destination );
 		console.log( '  ', '$', 'make' );
-		console.log( '' );
+		console.log();
 	}
-
 };
